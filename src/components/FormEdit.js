@@ -11,7 +11,11 @@ function FormEdit() {
 
     useEffect(()=>{
         axios.get(`http://localhost:5000/edit/${params.id}`).then((response)=>{
-            setEditUser(response.data)
+            if(response.data){
+                setEditUser(response.data)
+            }else{
+                history.push('/');
+            }
         })
     },[params.id, users]);
 

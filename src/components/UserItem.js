@@ -16,7 +16,6 @@ function UserItem({ user }) {
             const response = await axios.post(`http://localhost:5000/delete/${id}`);
             if(response){
                 setUsers(users.filter((t) => t.id !== id));
-
                 history.push("/");
             }
         }catch (e){

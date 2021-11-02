@@ -4,9 +4,6 @@ import {UserContext} from './UserContext';
 
 function UsersList() {
     const {users}=useContext(UserContext);
-
-    console.log('users', users);
-
     return (
         <div>
             { users.map((user) => {
