@@ -1,0 +1,49 @@
+.App {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 200px;
+  margin: 20px auto;
+}
+
+form .success {
+  margin-top: 10px;
+  color: green;
+}
+
+form .fail {
+  margin-top: 10px;
+  color: red;
+}
+
+label {
+  text-align: start;
+  margin-top: 15px;
+  color: blue;
+}
+
+button {
+  max-width: 100px;
+  margin: 10px auto;
+  padding: 5px 15px;
+  background-color: blue;
+  color: white;
+  cursor: pointer;
+}
+.editBtn{
+  display: flex;
+  justify-content: space-evenly;
+}
+.submit{
+  margin-left: 0px;
+}
+span{
+  margin: 0 10px;
+}
+.del{
+  margin-right: 10px;
+}
