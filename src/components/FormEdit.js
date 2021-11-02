@@ -16,6 +16,7 @@ function FormEdit() {
             }else{
                 history.push('/');
             }
+
         })
     },[params.id, users]);
 

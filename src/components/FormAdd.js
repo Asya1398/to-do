@@ -28,6 +28,7 @@ function FormAdd() {
                 try {
                     const response = await axios.post("http://localhost:5000", data);
                     if (response.status === 201) {
+
                         setUsers((users) => {
                             return [
                                 ...users,
@@ -38,6 +39,12 @@ function FormAdd() {
                             status: "success",
                             message: response.data.message,
                         })
+                        setTimeout(() => {
+                            setResponseMsg({
+                                status: "",
+                                message: "",
+                            })
+                        }, 3000)
                         setData({
                             name: "",
                             email: "",
@@ -54,7 +61,6 @@ function FormAdd() {
             }else {
                 alert('Invalid name or phone')
             }
-
         }
     }
     return (
@@ -82,7 +88,9 @@ function FormAdd() {
                         onChange={handleChange}
                     />
                     {
-                        responseMsg && <span className={responseMsg.status}> {responseMsg.message} </span>
+                        responseMsg && <span className={responseMsg.status}>
+                            {responseMsg.message}
+                        </span>
                     }
                     <button type='submit'>Add user</button>
                 </form>
